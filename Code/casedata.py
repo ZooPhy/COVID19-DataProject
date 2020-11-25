@@ -24,3 +24,12 @@ death_data['sum'] = death_data[list(death_data.columns)].sum(axis=1)
 # This is provided by the github repo as a running total (no need to find cummulative case count)
 metadata_frame["Cases"]= cases_data_frame.iloc[:,[columns-1]]
 metadata_frame["Deaths"]= deaths_data_frame.iloc[:,[columns-1]]
+# Export Data Frame to CSV file
+metadata_frame.to_csv('new_covid_data.csv')
+
+station_data = pd.read_csv("FIPSDATA.csv", dtype='object')
+station_data.columns = ['FIPS', 'Admin2', 'State']
+
+mergedData = station_data.merge(metadata_frame, on="Admin2")
+mergedData = mergedData.reindex(columns = ['FIPS_x', 'Admin2', 'State', 'UID', 'iso2', 'iso3', 'code3', 'Province_State', 'Country_Region', 'Lat', 'Long_', 'Cases', 'Deaths'])
+mergedData.to_csv('caseData.csv')
