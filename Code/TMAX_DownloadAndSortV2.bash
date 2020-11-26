@@ -1,6 +1,6 @@
 #!/bin/bash
 wget ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/2020.csv.gz
-gunzip 2020.csv.gz
+zcat 2020.csv.gz > 2020.csv
 grep 'TMAX' 2020.csv > 2020_TMAX.csv
 grep 'PRCP' 2020.csv > 2020_PRCP.csv
 grep 'USC\|USS\|USR\|USW' 2020_TMAX.csv > 2020_TMAX_USA.csv 
