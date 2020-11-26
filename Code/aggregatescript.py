@@ -6,6 +6,21 @@ import pandas as pd
 import numpy as np
 from sodapy import Socrata
 
+def merge_datasets(file1, file2):
+    f1 = pd.read_csv(file1, dtype=str, header=None)
+    f1.columns = ["Station", "Date", "Temp", "Prcp", "lat", "long", "6", "state", "city"]
+    f2 = pd.read_csv(file2, dtype=str, header=None)
+    f2.columns = ["Station", "County", "FIPS"]
+    df1 = pd.DataFrame(f1)
+    df2 = pd.DataFrame(f2)
+    merged = df1.merge(df2)
+    csv_merge = merged.to_csv("csv_merge.csv")
+    return merged
+
+file1 = 'mergedDataTEMPLOCATIONV2.csv'
+file2 = 'mergedSTATIONNAME_COUNTYV3.csv'
+mergedData = merge_datasets(file1, file2)
+
 cases_data_frame = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
 deaths_data_frame = pd.read_csv(
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv")
