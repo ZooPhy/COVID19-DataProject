@@ -14,4 +14,4 @@ awk -F, '{new_var=$1"\t"$2; print new_var "," $3}' 2020_PRCP_USA_SORTED.csv >F2.
 join -t, -1 1 -2 1 F1.csv F2.csv > downloaded_export.csv
 awk -F'\t' '{printf "%s,%s\n",$1,$2}' downloaded_export.csv > export_final.csv
 sort -t , -k 1,1 export_final.csv > sortData.csv #Sort the Temp data by station ID
-join -t , -1 1 -2 1 sortData.csv STATION_DATA.csv > mergedDataTEMPLOCATIONV2.csv #Merge based on station ID
+join -t , -1 1 -2 1 sortData.csv mergedSTATIONNAME_COUNTYV3.csv > mergedDataTEMPLOCATIONV2.csv #Merge based on station ID
