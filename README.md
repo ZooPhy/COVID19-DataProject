@@ -16,9 +16,13 @@ This python script is used to merge the travel and case data. The output is aggr
 Below is a description of the dependencies needed for each of the scripts above.
 
 ### FIPSDATA.csv
-### caseData.csv
+Data file with FIPS code for each US county. Needed for TravelCaseDataDownload.py.
+
 ### mergedSTATIONNAME_COUNTYV3.csv
+Data file with Station Name and associated county. Needed for TravelCaseDataDownload.py.
+
 ### us_census_2018_population_estimates_counties.csv
+2018 Census population data from The Covid Tracking Project. Needed for TravelCaseDataDownload.py.
 
 ## Pulling the Individual Case Data
 
