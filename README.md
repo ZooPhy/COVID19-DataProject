@@ -12,6 +12,14 @@ This python script is used to download travel data and daily COVID-19 case and d
 ### TravelCaseDataMerge.py
 This python script is used to merge the travel and case data. The output is aggregateDataFile.py. This is the complete aggregate data file used for this project, which can be found stored under ./Data.
 
+## Dependencies
+Below is a description of the dependencies needed for each of the scripts above.
+
+### FIPSDATA.csv
+### caseData.csv
+### mergedSTATIONNAME_COUNTYV3.csv
+### us_census_2018_population_estimates_counties.csv
+
 ## Pulling the Individual Case Data
 
 The COVID-19 case and death cumulative count can be individually pulled using the script ./Code/CaseDataDownload.py.
