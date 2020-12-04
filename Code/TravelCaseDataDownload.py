@@ -6,21 +6,6 @@ import pandas as pd
 import numpy as np
 from sodapy import Socrata
 
-def merge_datasets(file1, file2):
-    f1 = pd.read_csv(file1, dtype=str, header=None)
-    f1.columns = ["Station", "Date", "Temp", "Prcp", "lat", "long", "6", "state", "city"]
-    f2 = pd.read_csv(file2, dtype=str, header=None)
-    f2.columns = ["Station", "County", "FIPS"]
-    df1 = pd.DataFrame(f1)
-    df2 = pd.DataFrame(f2)
-    merged = df1.merge(df2)
-    csv_merge = merged.to_csv("csv_merge.csv")
-    return merged
-
-file1 = 'mergedDataTEMPLOCATIONV2.csv'
-file2 = 'mergedSTATIONNAME_COUNTYV3.csv'
-mergedData = merge_datasets(file1, file2)
-
 cases_data_frame = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
 deaths_data_frame = pd.read_csv(
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv")
@@ -66,20 +51,22 @@ client = Socrata("data.bts.gov",
                 password="MSauer200o!")
 
 # First 2000 results, returned as JSON from API / converted to Python list of
-# dictionaries by sodapy.
+#
+#dictionaries by sodapy.
 results = client.get("w96p-f2qv", limit=2117622)
 
 # Convert to pandas DataFrame
 results_df = pd.DataFrame.from_records(results)
-results_df.to_csv("travel.csv")
+results_df.to_csv("travel.csv",encoding='utf-8')
 
 
 
 
 
-
-df = pd.read_csv('csv_merge.csv', dtype={'FIPS': str}, sep=',')
-
+collist = ["Station", "Date", "Temp", "Prcp", "County", "FIPS"]
+df = pd.read_csv('mergedDataTEMPLOCATIONV2.csv', names = collist, dtype={'FIPS': object}, sep=',')
+#       Dcolumns = ["Station", "Date", "Temp", "Prcp", "County", "FIPS"]
+print(df)
 temp_median = df.groupby('FIPS', as_index=False)['Temp'].median()
 temp_mean = df.groupby('FIPS', as_index=False)['Temp'].mean()
 prcp_median = df.groupby('FIPS', as_index=False)['Prcp'].median()
@@ -102,7 +89,7 @@ climateMerge.columns
 
 # Merge Climate Data with Population Density Data based on FIPS/geo_id
 col_list = ["geo_id", "population", "pop_density"]
-densityData = pd.read_csv('us_census_2018_population_estimates_counties.csv', dtype={'geo_id': str}, usecols=col_list, sep=',')
+densityData = pd.read_csv('us_census_2018_population_estimates_counties.csv', dtype={'geo_id': object}, usecols=col_list, sep=',')
 
 #Output final data
 
@@ -126,19 +113,3 @@ cols = merged.columns.tolist()
 cols = ['date', 'state_fips', 'state_code', 'FIPS', 'county', 'TempMedian', 'TempMean', 'PrcpMedian', 'PrcpMean', 'population', 'pop_density', 'PercentStayAtHome', 'PercentNotStayAtHome', 'pop_stay_at_home', 'pop_not_stay_at_home', 'trips', 'trips_1', 'trips_1_3', 'trips_3_5', 'trips_5_10', 'trips_10_25', 'trips_25_50', 'trips_50_100', 'trips_100_250', 'trips_250_500', 'trips_500']
 merged = merged[cols]
 merged.to_csv("traveloutput.csv")
-
-
-#Aggregate data
-
-
-travelDataFrame = pd.read_csv("traveloutput.csv", dtype='object')
-infoDataFrame = pd.read_csv("caseData.csv", dtype='object')
-infoDataFrame.columns = (['Unnamed: 0','FIPS', 'Admin2', 'State', 'UID', 'iso2', 'iso3', 'code3',
-       'Province_State', 'Country_Region', 'Lat', 'Long_', 'Cases', 'Deaths'])
-del infoDataFrame['Unnamed: 0']
-
-finalMerge = infoDataFrame.merge(travelDataFrame, on='FIPS')
-cols = finalMerge.columns.tolist()
-del finalMerge['Unnamed: 0']
-
-finalMerge.to_csv('aggregateDataFile.csv')
