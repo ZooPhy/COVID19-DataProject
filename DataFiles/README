@@ -1,5 +1,5 @@
-Census_2020_MedianIncomeByCounty
+##Census_2020_MedianIncomeByCounty
 The Census_2020_MedianIncomeByCounty file provides the median income per household by US counties. This data was pulled from Census.gov, and reports the average of households in each county during 2020.
 
-ICUBedsPerCounty
+##ICUBedsPerCounty
 The ICUBedsPerCounty file represents the total amount of ICU beds in all hospitals per US county in 2020. This data was pulled from Kaiser Health News, and reports directly to CMS.
