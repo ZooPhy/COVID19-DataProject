@@ -5,17 +5,20 @@
 import pandas as pd
 import numpy as np
 from sodapy import Socrata
-#Example authenticated client (needed for non-public datasets):
+
+# Example authenticated client (needed for non-public datasets):
+#
+# INCLUDE USERNAME AND PASSWORD IN ORDER TO CORRECTLY GENERATE RESULTS
+# GENERATE USER AND PASSWORD BY MAKING A SOCRATA ACCOUNT AT THE WEBSITE BELOW
+# https://data.bts.gov/Research-and-Statistics/Trips-by-Distance/w96p-f2qv/data
 client = Socrata("data.bts.gov",
                  "9gUBYw5E3QOLsHxfn8R51Jfxb",
-                  username="masauer2@asu.edu",
-                password="MSauer200o!")
+                  username="-insert username-",
+                password="-insert password-")
 
-# First 2000 results, returned as JSON from API / converted to Python list of
-#
-#dictionaries by sodapy.
+# Get results using sodapy
 results = client.get("w96p-f2qv", limit=2117622)
 
-# Convert to pandas DataFrame
+# Convert to pandas DataFrame and export as csv
 results_df = pd.DataFrame.from_records(results)
 results_df.to_csv("travelData.csv",encoding='utf-8')
