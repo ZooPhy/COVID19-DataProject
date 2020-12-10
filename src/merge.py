@@ -27,12 +27,9 @@ travel2 = travel1.merge(trips)
 merged = travel2.merge(densityMerge, on='FIPS')
 cols = merged.columns.tolist()
 cols = ['state_fips', 'state_code', 'FIPS', 'county', 'TempMedian', 'TempMean', 'PrcpMedian', 'PrcpMean', 'population', 'pop_density', 'pop_stay_at_home', 'pop_not_stay_at_home', 'trips']
-#merged.to_csv("MERGED.csv", encoding='utf-8')
 
-#merged = merged[cols]
 
 # Merge with COVID data
-
 infoDataFrame = pd.read_csv("./COVID-19/covidData.csv", dtype='object')
 infoDataFrame = infoDataFrame.rename(columns={"FIPS_x":"FIPS"})
 del infoDataFrame['Unnamed: 0']
