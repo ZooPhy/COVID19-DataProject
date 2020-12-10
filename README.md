@@ -7,11 +7,12 @@ In order to pull the aggregate data, clone the git repository using
 git clone https://github.com/ZooPhy/COVID19-DataProject.git
 
 COVID19-DataProject requires some external python packages.
-
-1. Make sure that numpy, pandas, and sodapy are installed using the following commands
-`pip install pandas`
-`pip install numpy`
-`pip install sodapy`
+1. Make sure that pip and Python are both installed. Documentation for installing Python can be found at https://www.python.org/downloads/ and instructions for pip can be found at https://pip.pypa.io/en/stable/installing/.
+2. Make sure that numpy, pandas, and sodapy are installed using the following commands
+  *`pip install pandas`
+  *`pip install numpy`
+  *`pip install sodapy`
+2. 
 ### downloadClimateData.bash 
 This bash script is used to download a sorted list of the climate data based on FIPS county code. This climate data comes from the Global Historical Climatology Network - Daily (GHCN-Daily) datasets. Both the maximum daily temperature and the daily total precipitation are added to our data set.
 
