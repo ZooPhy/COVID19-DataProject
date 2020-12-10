@@ -11,8 +11,10 @@ from sodapy import Socrata
 # INCLUDE USERNAME AND PASSWORD IN ORDER TO CORRECTLY GENERATE RESULTS
 # GENERATE USER AND PASSWORD BY MAKING A SOCRATA ACCOUNT AT THE WEBSITE BELOW
 # https://data.bts.gov/Research-and-Statistics/Trips-by-Distance/w96p-f2qv/data
+#
+# Refer to README for information about generating a unqiue token identifier
 client = Socrata("data.bts.gov",
-                 "9gUBYw5E3QOLsHxfn8R51Jfxb",
+                 "- unique token identifier - ",
                   username="-insert username-",
                 password="-insert password-")
 
