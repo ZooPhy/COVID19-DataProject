@@ -1,5 +1,7 @@
 # COVID19-DataProject
 
+## Introduction
+
 ## Installation and Setup
 
 1. Clone the git repository using the following command
