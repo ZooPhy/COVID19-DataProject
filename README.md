@@ -20,7 +20,7 @@ pip install sodapy
 
 5. After setting up `travel.py`, the program can be run. From within the folder `src`, run the command `python run.py` to execute the program and generate a file with the aggregated travel, climate, and covid-19 data. This data file with be titled based on the day that the data was pulled. For example, data pulled on December 10th 2020 will be named `20201210.csv`. The individual scripts can be found within their respective subdirectories.
 
-## Description of the program
+## Running the program
 
 These are the scripts run by `run.py` (in order).
 
