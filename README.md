@@ -14,7 +14,9 @@ pip install pandas
 pip install numpy
 pip install sodapy
 ```
-3. From within the folder `src`, run the command `python run.py` to execute the program and generate a file with the aggregated travel, climate, and covid-19 data. This data file with be titled based on the day that the data was pulled. For example, data pulled on December 10th 2020 will be named `20201210.csv`. The individual scripts can be found within their respective subdirectories
+3. Within the directory `./src/travel/`, edit lines 16 and 17 in `travel.py` to include your individual Socrata username, password, and token ID. This username and password can be generated from https://data.bts.gov/Research-and-Statistics/Trips-by-Distance/w96p-f2qv/data. In order to generate a unique app token, go to `My Profile` > `Edit Profile` > `Developer Settings`. Within Developer Settings, click on `Create New App Token` and fill in the information.
+
+4. After setting up travel.py, from within the folder `src`, run the command `python run.py` to execute the program and generate a file with the aggregated travel, climate, and covid-19 data. This data file with be titled based on the day that the data was pulled. For example, data pulled on December 10th 2020 will be named `20201210.csv`. The individual scripts can be found within their respective subdirectories
 
 ## Description of the program
 
