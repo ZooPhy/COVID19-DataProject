@@ -2,6 +2,8 @@
 
 ## Introduction
 
+This project, led by Dr. Matthew Scotch at Arizona State University, aims to utilize various COVID-19 data to create phylogeographic models of pedestrian dynamics. The purpose of this GitHub repository TO BE CONTINUED THIS ISN'T DONE YET
+
 ## Installation and Setup
 
 1. Clone the git repository using the following command
