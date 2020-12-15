@@ -5,5 +5,8 @@ The Census_2020_MedianIncomeByCounty file provides the median income per househo
 The GEO_ID column refers to a specific numeric code that uniquely identifies all administrative/legal and statistical geographic areas for which the Census Bureau tabulates data. The Median Income column represents the median income in dollars per all households in each county.
 
 ICUBedsPerCounty
-The ICUBedsPerCounty file represents the total amount of ICU beds in all hospitals per US county in 2020. This data was pulled from Kaiser Health News, and reports directly to the Centers for Medicare and Medicaid Services.
+
+The ICUBedsPerCounty file represents the total amount of ICU beds in all hospitals per US county in 2020. This data was pulled from Kaiser Health News, and reports directly to the Centers for Medicare and Medicaid Services. 
+
+The ICU Beds column represents the total amount of ICU beds per that county. The Total Population column refers to the total population per county. The Population Aged 60+ column depicts the amount of residents that are over 60, and the Percent of Population Aged 60+ represents that number tabulated into percent form. The Residents Aged 60+ Per Each ICU Bed column displays the amount of residents over the age of 60 who have been admitted into an ICU bed.
 
