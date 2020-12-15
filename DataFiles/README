@@ -38,6 +38,6 @@ The trips column represents
 The TempMedian column displays 
 The PrcpMedian column displays
 The PrcpMean column represents
-The geo_id column depicts
+The geo_id column depicts refers to a specific numeric code that uniquely identifies all administrative/legal and statistical geographic areas for which the Census Bureau tabulates data. 
 The population column refers to
 The pop_density column refers to 
