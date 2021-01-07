@@ -30,7 +30,7 @@ infoDataFrame = pd.read_csv("./covid_state/covidData.csv", dtype='object')
 infoDataFrame = infoDataFrame.rename(columns={"FIPS_x":"FIPS"})
 del infoDataFrame['Unnamed: 0']
 del densityMerge['state']
-finalMerge = infoDataFrame.merge(densityMerge, left_on="State", right_on="State")
+finalMerge = infoDataFrame.merge(merged, left_on="State", right_on="State")
 cols = finalMerge.columns.tolist()
 
 
