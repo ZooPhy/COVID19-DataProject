@@ -1,4 +1,4 @@
-# COVID19-DataProject
+# COVID-19 Phylogeography Project
 
 ## Introduction
 
