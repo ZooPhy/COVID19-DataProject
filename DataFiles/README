@@ -1,44 +1,7 @@
-Census_2020_MedianIncomeByCounty
+DATA
 
-The Census_2020_MedianIncomeByCounty file provides the median income per household by US counties. This data was pulled from Census.gov, and reports the median of all households in each county during 2020.
+The Data file contains various collections of data concerning COVID-19, ranging from demographic data to travel data into and out of the county. Additionally, there are data present at both the county and state level for the US only.
 
-The GEO_ID column refers to a specific numeric code that uniquely identifies all administrative/legal and statistical geographic areas for which the Census Bureau tabulates data. 
-The Median Income column represents the median income in dollars per all households in each county, within 2020.
+SEQUENCES
 
-ICUBedsPerCounty
-
-The ICUBedsPerCounty file represents the total amount of ICU beds in all hospitals per US county in 2020. This data was pulled from Kaiser Health News, and reports directly to the Centers for Medicare and Medicaid Services. 
-
-The ICU Beds column represents the total amount of ICU beds recorded in 2020 per that county. 
-The Total Population column refers to the total population per county, dating from January 1, 2020 to present day. 
-The Population Aged 60+ column depicts the amount of residents that are over 60, recorded in 2020 per that county.
-The Percent of Population Aged 60+ represents that number tabulated into percent form. 
-The Residents Aged 60+ Per Each ICU Bed column displays the amount of residents over the age of 60 who have been admitted into an ICU bed, dating from January 1, 2020 to present day.
-
-AggregateData
-
-The AggregateData file utilizes various python and bash scripts to culminate a .csv file that presents certain COVID-19 data that changes per day. A new file is updated each day, as a CRONtab script pulls data every morning at 10 AM MST.
-
-The FIPS column refers to the Federal Information Processing System (FIPS) Codes per each US county, which are numbers which uniquely identify geographic areas.
-The Admin2 column displays each US county. This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The State column displays the state each county is located in, with a 2-letter format (i.e AL = Alabama). This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The UID column displays a unique idenfier for each county, in which the first 3 numbers represent the country (US) and the last 5 numbers represent the FIPS code (county identifier).
-The iso2 column represents the country each county is located in, with a 2-letter format (US). This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The iso3 column represents the country each county is located in, with a 3-letter format (USA). This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The code3 column displays the numerical value that identifies the country each county is located in, which is the United States, in this case. This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The Province_State column present the state each county is located in, with the full name of the state present. This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The Country_Region column represents the country each county is located in, with a 2-letter format (US). This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The Lat column depicts the latitudinal coordinates of each county. This data was pulled from the Climatology Network - Daily (GHCN-Daily) datasets. 
-The Long_ column depicts the longitudinal coordinates of each county. This data was pulled from the Climatology Network - Daily (GHCN-Daily) datasets. 
-The Cases column displays the total aggregate of COVID-19 cases per county dating from January 1, 2020 to present day. The amount of new cases per day is pulled with a CRONtab script, and is added to the total number of cases. This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The Deaths column displays the total aggregate of COVID-19 deaths per county dating from January 1, 2020 to present day. The amount of new deaths per day is pulled with a CRONtab script, and is added to the total number of deaths. This data was pulled from the Johns Hopkins Whiting School of Engineering. 
-The pop_stay_at_home column represents the total number of residents per county who did not travel into or out of the county, dating from January 1, 2020 to present day. This data was pulled from the Bureau of Transportation Statistics. 
-The pop_not_stay_at_home column represents the total number of residents per county who either travelled into or out of the county, dating from January 1, 2020 to present day. This data was pulled from the Bureau of Transportation Statistics.
-The trips column represents the total number of trips taken per each county, dating from January 1, 2020 to present day. This data was pulled from the Bureau of Transportation Statistics.
-The TempMedian column displays the median temperature in Kelvin of each county, dating from January 1, 2020 to present day. This data was pulled from the Climatology Network - Daily (GHCN-Daily) datasets. 
-The TempMean column represents the average temperature in Kelvin of each county, dating from January 1, 2020 to present day. This data was pulled from the Climatology Network - Daily (GHCN-Daily) datasets. 
-The PrcpMedian column displays the median precipitation rate in inches of each county, dating from January 1, 2020 to present day. This data was pulled from the Climatology Network - Daily (GHCN-Daily) datasets. 
-The PrcpMean column represents the average precipitation rate in inches of each county, dating from January 1, 2020 to present day. This data was pulled from the Climatology Network - Daily (GHCN-Daily) datasets. 
-The geo_id column depicts refers to a specific numeric code that uniquely identifies all administrative/legal and statistical geographic areas for which the Census Bureau tabulates data. This data was pulled from the 2020 US Census Survey. 
-The population column refers to the total population per county in 2020. This data was pulled from the 2020 US Census Survey. 
-The pop_density column refers to the population density per county in 2020, which is calculated as the number of residents over the square miles of the county in question. This data was pulled from the 2020 US Census Survey. 
+The Sequences file contains all the genetic sequences of the SARS-CoV-2, present within one FASTA file.
