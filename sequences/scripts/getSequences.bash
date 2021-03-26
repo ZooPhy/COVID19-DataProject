@@ -8,5 +8,7 @@ chmod +x dataformat;
 ./datasets download virus genome taxon 2697049 --host human --geo-location USA --filename SARS2-hum-USA.zip;
 unzip SARS2-hum-USA.zip;
 python3 compileFASTA.py;
+python3 finalizeSequences.py;
+python3 editpredictor.py;
 rm seq2.fasta;
 rm seq3.fasta;
