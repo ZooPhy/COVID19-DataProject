@@ -84,6 +84,7 @@ def extract_date(entry):
 Entrez.api_key = "14a1b40ccaa3d634843d10fbe9f33d65c809"
 Entrez.email = 'masauer2@asu.edu'
 
+# Begin by sorting through each entry and finding the appropriate data for header line & creating ID List
 g = open('seq2.fasta', 'w')
 idlist = open('idlist.txt','w')
 ids = []
@@ -106,6 +107,8 @@ with open('./ncbi_dataset/data/genomic.fna') as f:
     print('ID LIST COMPLETE')
 idlist.close()
 
+# Fetch header line info for each ID
+
 for id in ids:
     results = Entrez.efetch(db='nuccore', id=id, retmode="xml")
     response = Entrez.read(results)
@@ -116,6 +119,7 @@ for id in ids:
 print('SEQUENCE DATES OBTAINED')
 g.close()
 
+#Create a new file with the appropriate date
 finalsequences = open('seq3.fasta', 'w')
 with open('seq2.fasta') as sequences:
     for line in sequences:  
@@ -127,6 +131,7 @@ with open('seq2.fasta') as sequences:
 print('DATES WRITTEN TO FASTA')
 finalsequences.close()
 
+#Generate final fasta by removing extra newline characters
 final = open('finalsequences.fasta', 'w')
 with open('seq3.fasta') as finseq:
     for line in finseq:
