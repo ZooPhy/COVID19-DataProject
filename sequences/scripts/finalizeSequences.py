@@ -76,10 +76,16 @@ states = {
     "WI": "Wisconsin",
     "WY": "Wyoming"
 }
+
+# Allow for the user to select data from only certain states
+
 statesToSelect = input("Select States by Abbreviation seperated by commas (up to 10): ")
 statesToSelect = statesToSelect.split(',')
 print(statesToSelect)
 empty = []
+
+# nexus file will contain only header data
+# sequences.fasta will contain the final fasta file to be used for analysis
 nexus = open('nexus2.fasta', 'w')
 new = open('sequences.fasta', 'w')
 with open('finalsequences.fasta') as sequences:
