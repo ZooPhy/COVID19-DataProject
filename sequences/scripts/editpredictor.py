@@ -3,10 +3,10 @@ import pandas as pd
 
 # Function to convert csv file to xml file for use in BEAGLE analysis
 def func(row):
-    xml = ['<item>']
+    xml = ['<Data>']
     for field in row.index:
         xml.append('  <field name="{0}">{1}</field>'.format(field, row[field]))
-    xml.append('</item>')
+    xml.append('</Data>')
     return '\n'.join(xml)
 
 #Create a new dictionary with all states in fasta file
