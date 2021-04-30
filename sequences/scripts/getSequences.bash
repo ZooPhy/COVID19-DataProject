@@ -12,4 +12,3 @@ python3 finalizeSequences.py;
 python3 editpredictor.py;
 rm seq2.fasta;
 rm seq3.fasta;
-rm finalSequences.fasta;
