@@ -17,7 +17,7 @@ Accession ID | Two Letter State Abbreviation | DD-MM-YYYY
 ```
 bash alignment.bash
 ```
-Aligned files will be stored under the file name `alignedSequences.bash`.
+Aligned files will be stored under the file name `alignedSequences.fasta`.
 
 ## Using your own files
 
