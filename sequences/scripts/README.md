@@ -12,6 +12,12 @@ Accession ID | Two Digit State ID | DD-MM-YYYY
 ```
 
 `editpredictor.py` will edit the predictor file stored as `./DataFiles/Data/current_state.csv` from the root directory so that only states included in the FASTA file are included in the predictor file.
+## Aligning the Sequences
+
+```
+bash alignment.bash
+```
+Aligned files will be stored under alignedSequences.bash
 
 ## Using your own files
 
