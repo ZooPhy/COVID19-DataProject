@@ -1,4 +1,4 @@
-## Running the Sequences
+## Downloading New SARS-CoV-2 Sequences
 Sequences are gathered from NCBI using built in datasets and dataformat tools provided by NCBI.
 
 In order to gather COVID-19 sequences from NCBI and format the sequences, run the following command.
@@ -12,14 +12,14 @@ Accession ID | Two Letter State Abbreviation | DD-MM-YYYY
 ```
 
 `editpredictor.py` will edit the predictor file stored as `./DataFiles/Data/current_state.csv` from the root directory so that only states included in the FASTA file are included in the predictor file.
-## Aligning the Sequences
+## Aligning the SARS-CoV-2 Sequences
 
 ```
 bash alignment.bash
 ```
 Aligned files will be stored under the file name `alignedSequences.fasta`.
 
-## Using your own files
+## Using your own predictors or sequences
 
 If you wish to use your own predictor file, make sure that it is stored under the `./DataFiles/Data` directory under the file name `current_state.csv`.
 
