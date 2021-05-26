@@ -81,8 +81,8 @@ def extract_date(entry):
     for qualifier in qualifiers:
         yield qualifier['GBQualifier_value']
 # Entrez info
-Entrez.api_key = "14a1b40ccaa3d634843d10fbe9f33d65c809"
-Entrez.email = 'masauer2@asu.edu'
+Entrez.api_key = "--Replace with Entrez Token--"
+Entrez.email = '--Replace with Entrez Email--'
 
 # Begin by sorting through each entry and finding the appropriate data for header line & creating ID List
 g = open('seq2.fasta', 'w')
