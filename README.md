@@ -10,12 +10,12 @@ This project, led by Dr. Matthew Scotch at Arizona State University, aims to uti
 ```
 git clone https://github.com/ZooPhy/COVID19-DataProject.git
 ```
-2. Make sure that pip and Python are both installed. Documentation for installing Python can be found at https://www.python.org/downloads/ and instructions for pip can be found at https://pip.pypa.io/en/stable/installing/.
+2. Make sure that pip and Python 2.7 are both installed. Documentation for installing Python can be found at https://www.python.org/downloads/ and instructions for pip can be found at https://pip.pypa.io/en/stable/installing/.
 3. Make sure that numpy, pandas, and sodapy are installed using the following commands
 ```
-pip install pandas
-pip install numpy
-pip install sodapy
+pip2 install pandas
+pip2 install numpy
+pip2 install sodapy
 ```
 4. Make sure that 'wget' is installed:
 ```
