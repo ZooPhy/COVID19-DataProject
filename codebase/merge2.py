@@ -11,7 +11,7 @@ from datetime import datetime
 from datetime import timedelta
 
 var = datetime.today()
-var = var - timedelta(days = 1)
+var = var - timedelta(days = 0)
 timestr = var.strftime('%Y%m%d') + '.csv'
 
 
