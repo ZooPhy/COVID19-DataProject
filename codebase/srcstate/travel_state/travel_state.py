@@ -8,8 +8,8 @@ from sodapy import Socrata
 #Example authenticated client (needed for non-public datasets):
 client = Socrata("data.bts.gov",
                  "9gUBYw5E3QOLsHxfn8R51Jfxb",
-                  username="masauer2@asu.edu",
-                password="MSauer200o!")
+                  username="YOUR EMAIL",
+                password="YOUR PASSWORD")
 
 # First 2000 results, returned as JSON from API / converted to Python list of
 #
