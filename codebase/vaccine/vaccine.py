@@ -12,7 +12,7 @@ from datetime import timedelta
 
 # Unauthenticated client only works with public data sets. Note 'None'
 # in place of application token, and no username or password:
-client = Socrata("data.cdc.gov", "9gUBYw5E3QOLsHxfn8R51Jfxb", username="masauer2@asu.edu", password="MSauer200o!")
+client = Socrata("data.cdc.gov", "9gUBYw5E3QOLsHxfn8R51Jfxb", username="YOUR EMAIL", password="YOUR PASSWORD")
 
 # Example authenticated client (needed for non-public datasets):
 # client = Socrata(data.cdc.gov,
