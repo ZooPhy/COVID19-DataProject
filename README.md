@@ -10,6 +10,11 @@ This project, led by Dr. Matthew Scotch at Arizona State University, aims to uti
 ```
 git clone https://github.com/ZooPhy/COVID19-DataProject.git
 ```
+1b. Start clean enviornment
+```
+source ./test_venv/bin/activate
+```
+
 2. Make sure that pip and Python 3.7 (or greater) are both installed. Documentation for installing Python can be found at https://www.python.org/downloads/ and instructions for pip can be found at https://pip.pypa.io/en/stable/installing/.
 3. Make sure that numpy, pandas, and sodapy are installed using the following commands
 ```
