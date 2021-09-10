@@ -13,7 +13,7 @@ git clone https://github.com/ZooPhy/COVID19-DataProject.git
 
 2. Make sure that pip and Python 3.7 (or greater) are both installed. Documentation for installing Python can be found at https://www.python.org/downloads/ and instructions for pip can be found at https://pip.pypa.io/en/stable/installing/.
 
-3. Start clean enviornment
+3. Activate a new virtual environment
 ```
 source ./test_venv/bin/activate
 ```
