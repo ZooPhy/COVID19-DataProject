@@ -1,7 +1,0 @@
-DATA
-
-The Data file contains various collections of data concerning COVID-19, ranging from demographic data to travel data into and out of the county. Additionally, there are data present at both the county and state level for the US only.
-
-SEQUENCES
-
-The Sequences file contains all the genetic sequences of the SARS-CoV-2, present within one FASTA file.
